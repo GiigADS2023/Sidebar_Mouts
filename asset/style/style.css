@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", serif;
+}
+
+.sidebar-header img {
+    width: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.sidebar-container {
+    display: flex;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 70px;
+    z-index: 1000;
+    transition: all .25s ease-in-out;
+    background-color: rgb(220, 220, 220, 0.3);
+} 
+
+.sidebar.expand {
+    width: 300px;
+    min-width: 300px;
+}
+
+.sidebar-header {
+    display: flex;
+}
+
+.toggle-btn {
+    background: none;    
+    border: none;        
+    padding: 1rem 1rem;          
+    margin: 0;          
+    outline: none;   
+}
+
+.sidebar-logo {
+    margin: auto 0;
+}
+
+.sidebar-logo a {
+    color: #049C7B;
+    font-size: 1.15rem;
+    font-weight: 800;
+}
+
+#sidebar:not(.expand) .sidebar-logo,
+#sidebar:not(.expand) a.sidebar-link span {
+    display: none;
+}
+
+.sidebar-nav {
+    padding: 0;
+    flex: 1 1 auto;
+}
+
+a.sidebar-link {
+    padding: .625rem 1.625rem;
+    color: #000;
+    display: block;
+    font-weight: 700;
+    white-space: nowrap;
+    border-left: 3px solid transparent;
+}
+
+.sidebar-link i {
+    font-size: 1.1rem;
+    margin-right: .75rem;
+}
+
+h4 {
+    font-weight: 500;
+    margin: 10px 0;
+    white-space: nowrap;
+}
+
+.sidebar:not(.expand) h4,
+.sidebar:not(.expand) .sidebar-logo a,
+.sidebar:not(.expand) .sidebar-link span  {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.25s ease-in-out;
+}
+
+.sidebar-item {
+    position: relative;
+    margin: 5px 0; 
+}
+
+.sidebar-item .sidebar-dropdown {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+    width: 100%;
+    transition: opacity 200ms linear, max-height 200ms linear;
+    will-change: opacity, max-height;
+}
+
+.sidebar.expand .sidebar-item .has-dropdown.active+.sidebar-dropdown {
+    display: block;
+    max-height: 15em;
+    transition: all 200ms linear;
+    opacity: 1;
+}
+
+.sidebar.expand .sidebar-link.has-dropdown::after {
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    right: 1.5rem;
+    top: 1.4rem;
+    border: solid;
+    border-width: 2px 2px 0 0;
+    transform: rotate(-40deg);
+    transition: transform 0.2s ease-out;
+}
+
+.sidebar.expand .sidebar-link.has-dropdown.active::after {
+    transform: rotate(135deg);
+}
+
+
+a.sidebar-link:hover,
+.sidebar-link.active {
+    background-color: #aeaeae29;
+    border-left: 3px solid #049C7B;
+}
+
+.sidebar-dropdown a.sidebar-link {
+    position: relative;
+    padding-left: 3rem;
+    transition: all 0.5s;
+}
+
+.sidebar-dropdown a.sidebar-link::before{
+    content: "";
+    height: 0.125rem;
+    width: 0.375rem;
+    background-color: #000;
+    position: absolute;
+    left: 1.8rem;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.5s;
+}
+
+.sidebar-dropdown a.sidebar-link:hover::before {
+    width: 1.25rem;
+}
+
+.sidebar-dropdown a.sidebar-link:hover {
+    background: transparent;
+    border-left: 3px solid transparent;
+    padding-left: 3.8rem;
+    color: #049C7B;
+}
