@@ -7,9 +7,9 @@
     font-family: "Roboto", serif;
 }
 
-.sidebar-header img {
-    width: 42px;
-    border-radius: 50%;
+.sidebar-header .logoMouts {
+    width: 65px;
+    height: 55px;
     object-fit: cover;
     cursor: pointer;
 }
@@ -25,16 +25,16 @@ li {
 .sidebar-container {
     display: flex;
     height: 100vh;
-    background-color: #f0f0f0;
+    background-color: #425261;
 }
 
 .sidebar {
     display: flex;
     flex-direction: column;
-    width: 70px;
+    width: 90px;
     z-index: 1000;
     transition: all .25s ease-in-out;
-    background-color: rgb(220, 220, 220, 0.3);
+    background-color: #1D2E3B;
 } 
 
 .sidebar.expand {
@@ -58,10 +58,13 @@ li {
     margin: auto 0;
 }
 
-.sidebar-logo a {
-    color: #049C7B;
-    font-size: 1.15rem;
-    font-weight: 800;
+.sidebar-logo img {
+    width: 55%;
+    height: 55%;
+}
+
+.sidebar-nav .mouts_subtitle {
+    color: #5DD9C1;
 }
 
 #sidebar:not(.expand) .sidebar-logo,
@@ -76,7 +79,7 @@ li {
 
 a.sidebar-link {
     padding: .625rem 1.625rem;
-    color: #000;
+    color: #B9DBD0;
     display: block;
     font-weight: 700;
     white-space: nowrap;
@@ -95,7 +98,7 @@ h4 {
 }
 
 .sidebar:not(.expand) h4,
-.sidebar:not(.expand) .sidebar-logo a,
+.sidebar:not(.expand) .sidebar-logo img,
 .sidebar:not(.expand) .sidebar-link span  {
     visibility: hidden;
     opacity: 0;
@@ -146,7 +149,7 @@ h4 {
 a.sidebar-link:hover,
 .sidebar-link.active {
     background-color: #aeaeae29;
-    border-left: 3px solid #049C7B;
+    border-left: 3px solid #5DD9C1;
 }
 
 .sidebar-dropdown a.sidebar-link {
@@ -159,7 +162,7 @@ a.sidebar-link:hover,
     content: "";
     height: 0.125rem;
     width: 0.375rem;
-    background-color: #000;
+    background-color: #fff;
     position: absolute;
     left: 1.8rem;
     top: 50%;
@@ -175,5 +178,7 @@ a.sidebar-link:hover,
     background: transparent;
     border-left: 3px solid transparent;
     padding-left: 3.8rem;
-    color: #049C7B;
+    color: #54B097;
 }
+
+
