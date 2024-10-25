@@ -55,3 +55,34 @@ function toggleVisibility(isExpanded) {
     logo.style.visibility = isExpanded ? "visible" : "hidden";
     logo.style.opacity = isExpanded ? "1" : "0";
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const toggleBtn = document.querySelector('.toggle-btn');
+    const sidebar = document.querySelector('.sidebar');
+    const dropdownLinks = document.querySelectorAll('.has-dropdown');
+
+    toggleBtn.addEventListener('click', () => {
+        sidebar.classList.toggle('active');
+        closeAllDropdowns();
+    });
+
+    dropdownLinks.forEach(link => {
+        link.addEventListener('click', (event) => {
+            const dropdown = link.nextElementSibling;
+            if (dropdown) {
+                dropdown.classList.toggle('active');
+                closeAllDropdowns(dropdown);
+            }
+            event.preventDefault(); 
+        });
+    });
+
+    function closeAllDropdowns(exceptDropdown = null) {
+        dropdownLinks.forEach(link => {
+            const dropdown = link.nextElementSibling;
+            if (dropdown && dropdown !== exceptDropdown) {
+                dropdown.classList.remove('active');
+            }
+        });
+    }
+});

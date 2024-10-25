@@ -186,4 +186,15 @@ a.sidebar-link:hover,
     color: #54B097;
 }
 
+.sidebar-dropdown {
+    display: none; 
+}
+
+.sidebar-dropdown.active {
+    display: block;
+}
+
+.sidebar.active {
+    width: 250px; 
+}
 
