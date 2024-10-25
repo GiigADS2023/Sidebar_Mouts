@@ -7,9 +7,14 @@
     font-family: "Roboto", serif;
 }
 
+.sidebar-header {
+    display: flex;
+    align-items: center; 
+}
+
 .sidebar-header .logoMouts {
-    width: 65px;
-    height: 55px;
+    width: 50px;
+    height: auto; 
     object-fit: cover;
     cursor: pointer;
 }
@@ -31,15 +36,15 @@ li {
 .sidebar {
     display: flex;
     flex-direction: column;
-    width: 90px;
+    width: 80px;
     z-index: 1000;
     transition: all .25s ease-in-out;
     background-color: #1D2E3B;
 } 
 
 .sidebar.expand {
-    width: 300px;
-    min-width: 300px;
+    width: 250px;
+    min-width: 250px;
 }
 
 .sidebar-header {
@@ -59,8 +64,8 @@ li {
 }
 
 .sidebar-logo img {
-    width: 55%;
-    height: 55%;
+    width: 50%;
+    height: 50%;
 }
 
 .sidebar-nav .mouts_subtitle {
@@ -73,21 +78,21 @@ li {
 }
 
 .sidebar-nav {
-    padding: 0;
-    flex: 1 1 auto;
+    flex: 1;
 }
 
 a.sidebar-link {
+    display: flex;
+    align-items: center;
     padding: .625rem 1.625rem;
     color: #B9DBD0;
-    display: block;
     font-weight: 700;
     white-space: nowrap;
     border-left: 3px solid transparent;
 }
 
 .sidebar-link i {
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin-right: .75rem;
 }
 
