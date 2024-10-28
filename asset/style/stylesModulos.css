@@ -1,39 +1,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
-body {
+.conteudo {
     margin: 0;
-    background-color: #1D2E3B;
+    background-color: #425261;
     font-family: "Lato", serif;
-    --azul-escuro: #425261;
-    --marrom: #957d6b;
-    --bege: #d8c6b0;
-    --azul: #6298bb;
-    --verde-escuro: #049c7b;
-    --verde1: #3cac8c;
-    --verde2: #54b097;
-    --verde3: #7cbcac;
-    --verde4: #b0dbd0;
-    --verde5: #99bfbf;
-    --verdeEscuro: #1e2b3c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
-.card-text, .card-title {
-    color: white;
+.container-custom {
+    background-color: #1D2E3B;
+    height: max-content;
+    width: 100%;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.card-title {
+    color: #5DD9C1;
+}
+
+.card-text {
+    color: #b9dbd0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .h1_modulos {
     color: #5DD9C1;
+    text-align: left;
 }
 
 .card {
-    background-color: #1e2b3c;
+    background-color: #1D2E3B;
     margin-top: 20px;
+    border: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
 }
 
 .label {
     color: #5DD9C1;
     font-weight: bold;
-    accent-color: #7cbcac;
     margin-right: 20px;
 }
 
@@ -42,60 +62,78 @@ body {
 }
 
 .btn_novoModulo {
-    background-color: #7cbcac;
+    background-color: #54b097;
     border-color: transparent;
     color: white;
-    border-radius: 10px;
+    border-radius: 6px;
     font-weight: bold;
     height: 40px;
+    white-space: nowrap;
+    padding: 0 15px;
 }
 
 .btn_novoModulo:hover {
-    background-color: #2e86ab;
+    background-color: #049c7b;
     opacity: 0.9;
     border-color: transparent;
 }
 
-.pesquisar:focus {
-    box-shadow: 0 0 10px #2E86AB;
-    outline: none;
+.btn:active {
+    transform: none;
 }
 
-.pesquisar {
-    border-radius: 10px;
-    width: 300px;
-    border-color: transparent;
+.btn {
+    outline: none;
+    box-shadow: none;
+    transition: none;
+}
+
+.btn_novoModulo {
+    outline: none;
+    box-shadow: none;
+    transition: none;
 }
 
 .card .btn {
-    background-color: #7cbcac;
+    outline: none;
+    box-shadow: none;
+    transition: none;
+}
+
+.btn:active,
+.btn_novoModulo:active,
+.card .btn:active {
+    transform: none;
+}
+
+.pesquisar {
+    border-radius: 6px;
+    width: 100%;
+    border-color: transparent;
+    margin-right: 10px;
+}
+
+.radio-group {
+    margin-top: 10px;
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.card .btn {
+    background-color: #54b097;
     border-color: transparent;
     color: white;
-    border-radius: 10px;
+    border-radius: 6px;
     font-weight: bold;
 }
 
 .card .btn:hover {
-    background-color: #2e86ab;
+    background-color: #049c7b;
     opacity: 0.9;
     border-color: transparent;
 }
-
-.radioPesquisar1 {
-    margin-left: 20px;
-    margin-top: -1px;
-    vertical-align: middle;
-}
-
-.radio-group {
-    display: flex;
-    gap: 5px;
-}
-
-input[type="radio"] {
-    margin-top: -1px;
-    vertical-align: middle;
-  }  
 
 h1,
 .card-title,
@@ -104,7 +142,93 @@ h1,
     font-weight: bold;
 }
 
-.div_pesquisar {
-    display: flex;
-    align-items: center;
+@media (max-width: 1200px) {
+    .card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 992px) {
+    .card {
+        margin-top: 15px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .h1_modulos {
+        font-size: 34px;
+        text-align: left;
+    }
+
+    .div_pesquisar {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .pesquisar {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .btn_novoModulo {
+        width: 100%;
+        margin-top: 15px;
+        text-align: left;
+    }
+
+    .card {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .radio-group {
+        display: flex;
+        gap: 10px;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+    
+    .radio-group label {
+        display: flex;
+        align-items: center;
+    }
+    
+    .radio-group label,
+    .radio-group input[type="radio"] {
+        margin-bottom: 0;
+    }
+
+    .radio-group input[type="radio"] {
+        margin-top: 0;
+        vertical-align: middle;
+    }
+
+    .label {
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 576px) {
+    .h1_modulos {
+        font-size: 30px;
+    }
+
+    .pesquisar {
+        width: 100%;
+    }
+
+    .card {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .btn_novoModulo {
+        width: 100%;
+        margin-top: 15px;
+    }
 }

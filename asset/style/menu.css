@@ -7,6 +7,15 @@
     font-family: "Roboto", serif;
 }
 
+.sidebar-container .sidebar-header .logoMouts {
+    width: 50px;
+    object-fit: contain; 
+}
+
+.sidebar-header .logoMouts {
+    width: 50px !important;
+}
+
 .sidebar-header {
     display: flex;
     align-items: center; 
@@ -17,6 +26,24 @@
     height: auto; 
     object-fit: cover;
     cursor: pointer;
+}
+
+.toggle-btn {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    cursor: pointer;
+}
+
+.sidebar-container ul li a {
+    text-decoration: none;
+    list-style: none;
+    color: #B9DBD0;
+}
+
+.sidebar-container ul {
+    margin: 0;
+    padding: 0;
 }
 
 a {
@@ -34,32 +61,17 @@ li {
 }
 
 .sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
+    display: flex;
+    flex-direction: column;
     width: 80px;
-    height: 100%;
+    z-index: 1000;
+    transition: width 0.4s ease-in-out;
     background-color: #1D2E3B;
-    transition: width 0.25s;
-    overflow-y: auto;
-    overflow: hidden;
-}
+} 
 
 .sidebar.expand {
     width: 250px;
     min-width: 250px;
-}
-
-.conteudo {
-    margin-left: 80px; /* Alinhar com a sidebar */
-    padding: 20px;
-    width: calc(100% - 80px);
-    transition: margin-left 0.25s;
-}
-
-.sidebar.expand + .conteudo {
-    margin-left: 250px;
-    width: calc(100% - 250px);
 }
 
 .sidebar-header {
@@ -213,4 +225,3 @@ a.sidebar-link:hover,
 .sidebar.active {
     width: 250px; 
 }
-

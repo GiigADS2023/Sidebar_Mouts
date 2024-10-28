@@ -1,7 +1,0 @@
-function adicionarModulo(){
-
-}
-
-function adicionarImagemEmenta(){
-    
-}

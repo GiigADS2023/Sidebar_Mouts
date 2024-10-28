@@ -26,11 +26,11 @@
                     <span class="mouts_subtitle">Menu Principal</span>
                 </h4>
                 <li class="sidebar-item">
-                    <a href="#" class="sidebar-link has-dropdown">
+                    <a href="#" class="sidebar-link has-dropdown" aria-expanded="false" aria-controls="aluno-dropdown">
                         <i class="fa-solid fa-users-gear"></i>
                         <span>Alunos</span>
                     </a>
-                    <ul class="sidebar-dropdown">
+                    <ul class="sidebar-dropdown" id="aluno-dropdown">
                         <li class="sidebar-item">
                             <a href="#" class="sidebar-link">Matricular</a>
                             <a href="#" class="sidebar-link">Consultar</a>
@@ -38,27 +38,27 @@
                     </ul>
                 </li>
                 <li class="sidebar-item">
-                    <a href="#" class="sidebar-link has-dropdown">
+                    <a href="#" class="sidebar-link has-dropdown" aria-expanded="false" aria-controls="conteudo-dropdown">
                         <i class="fa-solid fa-book"></i>
                         <span>Conteúdo</span>
                     </a>
-                    <ul class="sidebar-dropdown">
+                    <ul class="sidebar-dropdown" id="conteudo-dropdown">
                         <li class="sidebar-item">
-                            <a href="#" class="sidebar-link" onclick="carregarConteudo('Modulos.html')">Módulos</a>
+                            <a href="pages/Modulos.html" class="sidebar-link" onclick="event.preventDefault(); carregarConteudo('pages/Modulos.html');">Módulos</a>
                         </li>
                     </ul>
                 </li>
                 <li class="sidebar-item">
-                    <a href="#" class="sidebar-link has-dropdown">
+                    <a href="#" class="sidebar-link has-dropdown" aria-expanded="false" aria-controls="pedagogico-dropdown">
                         <i class="fa-regular fa-id-card"></i>
                         <span>Pedagógico</span>
                     </a>
-                    <ul class="sidebar-dropdown">
+                    <ul class="sidebar-dropdown" id="pedagogico-dropdown">
                         <li class="sidebar-item">
                             <a href="#" class="sidebar-link">Marcar Presença</a>
                             <a href="#" class="sidebar-link">Registro de Notas</a>
                             <a href="#" class="sidebar-link">Histórico de Notas</a>
-                            <a href="#" class="sidebar-link">Frequencia</a>
+                            <a href="#" class="sidebar-link">Frequência</a>
                         </li>
                     </ul>
                 </li>
@@ -67,11 +67,11 @@
                     <span class="mouts_subtitle">Geral</span>
                 </h4>
                 <li class="sidebar-item">
-                    <a href="#" class="sidebar-link has-dropdown">
+                    <a href="#" class="sidebar-link has-dropdown" aria-expanded="false" aria-controls="suporte-dropdown">
                         <i class="fa-solid fa-headset"></i>
                         <span>Suporte</span>
                     </a>
-                    <ul class="sidebar-dropdown">
+                    <ul class="sidebar-dropdown" id="suporte-dropdown">
                         <li class="sidebar-item">
                             <a href="#" class="sidebar-link">Novo Chamado</a>
                             <a href="#" class="sidebar-link">Meus Chamados</a>
@@ -83,11 +83,11 @@
                     <span class="mouts_subtitle">Conta</span>
                 </h4>
                 <li class="sidebar-item">
-                    <a href="#" class="sidebar-link has-dropdown">
+                    <a href="#" class="sidebar-link has-dropdown" aria-expanded="false" aria-controls="usuario-dropdown">
                         <i class="fa-solid fa-user-large"></i>
                         <span>Usuário</span>
                     </a>
-                    <ul class="sidebar-dropdown">
+                    <ul class="sidebar-dropdown" id="usuario-dropdown">
                         <li class="sidebar-item">
                             <a href="#" class="sidebar-link">Meu Perfil</a>
                             <a href="#" class="sidebar-link">Alterar Senha</a>
