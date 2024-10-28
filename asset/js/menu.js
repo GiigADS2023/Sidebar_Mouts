@@ -86,3 +86,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+function carregarConteudo(arquivo) {
+    const conteudo = document.getElementById('conteudo-principal');
+
+    // Adiciona um indicador de carregamento
+    conteudo.innerHTML = '<p>Carregando...</p>';
+
+    fetch(arquivo)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Erro ao carregar o conteúdo');
+            }
+            return response.text();
+        })
+        .then(data => {
+            conteudo.innerHTML = data;
+        })
+        .catch(error => {
+            conteudo.innerHTML = '<p>Erro ao carregar o conteúdo.</p>';
+            console.error('Erro:', error);
+        });
+}

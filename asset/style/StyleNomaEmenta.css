@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+body {
+    margin: 0;
+    background-color: #425261;
+    font-family: "Lato", serif;
+    --azul-escuro: #425261;
+    --marrom: #957d6b;
+    --bege: #d8c6b0;
+    --azul: #6298bb;
+    --verde-escuro:#049c7b;
+    --verde1:#3cac8c;
+    --verde2: #54b097;
+    --verde3:#7cbcac;
+    --verde4:#b0dbd0;
+    --verde5:#99bfbf;
+    --verdeEscuro:#1e2b3c;
+}
+
+.div_TxtFora {
+    color: #5DD9C1;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 60px;
+}
+
+.p_1 {
+    color: #5DD9C1;
+    display: inline;
+    font-size: 20px;
+}
+
+.h2_Modulo {
+    font-size: 40px;
+    text-decoration: none
+}
+
+.div_ImgNovoModulo {
+    text-align: center;
+
+}
+
+.div_NovoModulo {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+    background-color: #1e2b3c;
+    padding: 70px;
+    display: flex;
+    border-radius: 10px;
+}
+
+.btn_EnviarImg {
+    background-color: #7cbcac;
+    font-family: "Lato", serif;
+    color: white;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 6px;
+    width: 150px;
+    height: 50px;
+    display: block;
+    transition: background-color 0.3s ease;
+    border-color: transparent;
+}
+
+.btn_AdicionarModulo {
+    font-family: "Lato", serif;
+    background-color: #7cbcac;
+    color: white;
+    border-radius: 10px;
+    margin-left: 50px;
+    width: 150px;
+    height: 50px;
+    transition: background-color 0.3s ease;
+    border-color: transparent;
+}
+
+.btn_AdicionarModulo:hover{
+    background-color: #2E86AB;
+    opacity: 0.9;
+}
+.btn_EnviarImg:hover{
+    background-color: #2E86AB;
+    opacity: 0.9;
+}
+
+.txt_TituloModulo {
+    font-family: "Lato", serif;
+    width: 98%;
+    margin-left: 50px;
+    border-radius: 10px;
+    height: 40px;
+}
+
+.txt_AreaModulo {
+    font-family: "Lato", serif;
+    width: 98%;
+    margin-left: 50px;
+    border-radius: 10px;
+    height: 180px;
+    border-color: black;
+}
+
+.label_InfoModulo{
+    font-family: "Lato", serif;
+    margin-left: 50px;
+    color: #5DD9C1;
+}
+
+a{
+    text-decoration: none;
+}
