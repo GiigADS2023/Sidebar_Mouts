@@ -42,6 +42,7 @@ li {
     background-color: #1D2E3B;
     transition: width 0.25s;
     overflow-y: auto;
+    overflow: hidden;
 }
 
 .sidebar.expand {
