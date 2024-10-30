@@ -1,6 +1,7 @@
-const dateInput = document.getElementById('data');
-const outputDiv = document.getElementById('turma');
-const materiaSelect = document.getElementById('sMateria');
+(() => {
+  const dateInput = document.getElementById('data');
+  const outputDiv = document.getElementById('turma');
+  const materiaSelect = document.getElementById('sMateria');
 
 const tabelaResponsiva = `
   <table class="table table-hover" id="tabela-responsiva">
@@ -242,3 +243,4 @@ function validarDataAnterior() {
     return false;
   }
 }
+})();

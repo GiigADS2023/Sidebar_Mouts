@@ -1,8 +1,7 @@
-const dateInput = document.getElementById('data');
-const outputDiv = document.getElementById('turma');
-const pesquisarBtn = document.getElementById('pesquisar');
-
-
+(() => {
+    const dateInput = document.getElementById('data');
+    const outputDiv = document.getElementById('turma');
+    const pesquisarBtn = document.getElementById('pesquisar');
 
 const tabela = `
   <table class="table table-hover">
@@ -113,7 +112,4 @@ pesquisarBtn.addEventListener('click', (event) => {
 });
 
 window.addEventListener('resize', exibirTabela);
-
-
-
-
+})();

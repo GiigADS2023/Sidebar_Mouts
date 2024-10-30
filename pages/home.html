@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="asset/style/menu.css">
+    <link rel="stylesheet" href="/asset/style/menu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    <link rel="shortcut icon" href="asset/img/mouts_icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/asset/img/mouts_icon.png" type="image/x-icon">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
@@ -18,10 +18,10 @@
         <aside class="sidebar">
             <div class="sidebar-header">
                 <button type="button" class="toggle-btn">
-                    <img src="asset/img/mouts_logo.svg" alt="mouts_logo" class="logoMouts">
+                    <img src="/asset/img/mouts_logo.svg" alt="mouts_logo" class="logoMouts">
                 </button>
                 <div class="sidebar-logo">
-                    <img src="asset/img/mouts_title.svg" alt="mouts_title" class="titleMouts">    
+                    <img src="/asset/img/mouts_title.svg" alt="mouts_title" class="titleMouts">    
                 </div>
             </div>
             <ul class="sidebar-nav">
@@ -35,8 +35,8 @@
                     </a>
                     <ul class="sidebar-dropdown" id="aluno-dropdown">
                         <li class="sidebar-item">
-                            <a href="pages/cadastrarAlunos.html" class="sidebar-link" onclick="event.preventDefault(); carregarConteudo('pages/cadastrarAlunos.html');">Matricular</a>
-                            <a href="pages/consultarAlunos.html" class="sidebar-link" onclick="event.preventDefault(); carregarConteudo('pages/consultarAlunos.html');">Consultar</a>
+                            <a href="cadastrarAlunos.html" class="sidebar-link" onclick="carregarConteudo('cadastrarAlunos.html', event)">Matricular</a>
+                            <a href="consultarAlunos.html" class="sidebar-link" onclick="carregarConteudo('consultarAlunos.html', event)">Consultar</a>
                         </li>
                     </ul>
                 </li>
@@ -47,7 +47,7 @@
                     </a>
                     <ul class="sidebar-dropdown" id="conteudo-dropdown">
                         <li class="sidebar-item">
-                            <a href="pages/Modulos.html" class="sidebar-link" onclick="event.preventDefault(); carregarConteudo('pages/Modulos.html');">Módulos</a>
+                            <a href="Modulos.html" class="sidebar-link" onclick="carregarConteudo('Modulos.html', event)">Módulos</a>
                         </li>
                     </ul>
                 </li>
@@ -58,10 +58,10 @@
                     </a>
                     <ul class="sidebar-dropdown" id="pedagogico-dropdown">
                         <li class="sidebar-item">
-                            <a href="pages/frequenciaAlunos.html" class="sidebar-link" onclick="event.preventDefault(); carregarConteudo('pages/frequenciaAlunos.html');">Marcar Presença</a>
-                            <a href="pages/boletimAlunos.html" class="sidebar-link" onclick="event.preventDefault(); carregarConteudo('pages/boletimAlunos.html');">Registrar Notas</a>
-                            <a href="pages/relatorioNotas.html" class="sidebar-link" onclick="event.preventDefault(); carregarConteudo('pages/relatorioNotas.html');">Histórico de Notas</a>
-                            <a href="pages/relatorioFrequencia.html" class="sidebar-link" onclick="event.preventDefault(); carregarConteudo('pages/relatorioFrequencia.html');">Frequência</a>
+                            <a href="frequenciaAlunos.html" class="sidebar-link" onclick="carregarConteudo('frequenciaAlunos.html', event)">Marcar Presença</a>
+                            <a href="boletimAlunos.html" class="sidebar-link" onclick="carregarConteudo('boletimAlunos.html', event)">Registrar Notas</a>
+                            <a href="relatorioNotas.html" class="sidebar-link" onclick="carregarConteudo('relatorioNotas.html', event)">Histórico de Notas</a>
+                            <a href="relatorioFrequencia.html" class="sidebar-link" onclick="carregarConteudo('relatorioFrequencia.html', event)">Frequência</a>
                         </li>
                     </ul>
                 </li>
@@ -99,7 +99,7 @@
                 </li>
             </ul>
             <div class="sidebar-footer">
-                <a id="logout" class="sidebar-link" style="text-decoration: none;">
+                <a href="#" class="sidebar-link">
                     <i class="fa-solid fa-arrow-right-from-bracket"></i>
                     <span>Sair</span>
                 </a>
@@ -108,15 +108,13 @@
 
         <div class="conteudo" id="conteudo-principal">
             <div class="logo-container">
-                <img src="asset/img/logo.svg" alt="mouts academy logo" class="logo-img">
+                <img src="/asset/img/logo.svg" alt="mouts academy logo" class="logo-img">
                 <p class="text-content">Transformando talentos em profissionais globais por meio de tecnologia e inovação.
                 </p>
                 <h3>SEU FUTURO COMEÇA AQUI!</h3>
             </div>
         </div>
     </div>
-    <script src="asset/js/menu.js"></script>
-    <script src="asset/js/auth.js"></script>
-    <script src="asset/js/logout.js"></script>
+    <script src="/asset/js/menu.js"></script>
 </body>
 </html>
