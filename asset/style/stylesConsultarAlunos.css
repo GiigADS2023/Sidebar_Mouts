@@ -1,0 +1,326 @@
+/* Cores */
+:root{
+    --azul-escuro: #425261;
+    --marrom: #957d6b;
+    --bege: #d8c6b0;
+    --azul: #6298bb;
+    --verde-escuro:#049c7b;
+    --verde1:#3cac8c;
+    --verde2: #54b097;
+    --verde3:#7cbcac;
+    --verde4:#b0dbd0;
+    --verde5: #99bfbf;
+
+    --fundodapagina: #425261;
+    --botoes: #54b097;
+    --hoverBotao: #049c7b;
+    --titulos: #5DD9C1;
+    --texto: #b9dbd0;
+    --a: #b9dbd0;
+    --hoverA: #99bfbf;
+    --containers:#1D2E3B;
+    --inputs: white;
+}
+
+.conteudo {
+    margin: 0;
+    background-color: #425261;
+    font-family: "Lato", serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container{
+    background-color: #1D2E3B;
+    height: max-content;
+    width: 100%;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.div_CardHeader {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    color: var(--titulos);
+}
+
+/* Ajuste de layout para seções de entrada e botão de pesquisa */
+.form_CardBody {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.form_input {
+    width: 80%; /* Ajuste inicial do input */
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background-color: var(--containers);
+    color: white;
+    
+}
+
+
+
+.div_grindBody {
+    display: flex;
+    align-items: stretch; /* Mantém os itens esticados */
+    flex-wrap: wrap;
+    margin: auto; /* Remove margem extra */
+    padding: 5px; /* Remove o preenchimento */
+    gap: 0; /* Remove o espaço entre os itens */
+}
+
+.Botaoprinc{
+    background-color: var(--botoes);
+    color: white;
+    border-radius: 6px;
+    border: none;
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+
+.Botaoprinc:hover{
+    background-color: var(--hoverBotao);
+}
+
+/* Definições do boletim */
+.partBoletim {
+    flex: 1; /* Garante que todos os elementos ocupem espaço igual */
+    margin: 0; /* Remove a margem extra entre os elementos */
+    border: 1px solid #333; /* Mantém as bordas */
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        border: 1px solid #333;
+        border-radius: 8px;
+        margin: 10px;
+    }
+    
+    h4 {
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+        background-color: #f0f0f0;
+        border-bottom: 2px solid #333;
+    }
+    
+    li {
+        padding: 10px;
+        font-size: 16px;
+        border-bottom: 1px solid #ddd;
+        background-color: #fafafa;
+    }
+    
+    li:last-child {
+        border-bottom: none;
+    }
+}
+
+.partBoletim ul {
+    padding: 0; /* Remove o padding interno */
+    margin: 0; /* Remove a margem para ficar bem próximo */
+}
+
+.partBoletim h4, .partBoletim li {
+    margin: 0;
+    padding: 10px;
+}
+
+.partBoletim_F_M {
+    text-align: center;
+    align-items: center;
+}
+
+.display {
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+}
+
+.display label{
+    color: var(--texto);
+}
+
+
+
+
+.input100 {
+    width: 100%;
+}
+
+/* Botão PDF ajustável */
+.ButtonPDF {
+    display: inline-block;
+    width: auto;
+    padding: 5px;
+    margin-left: auto;
+    margin-top: 1.5rem;
+    border-radius: 6px;
+    border: none;
+
+    background-color: var(--botoes);
+    color: white;
+
+}
+
+.div_Boletim{
+    background-color: white;
+    padding-top: 0.5rem;
+    border-radius: 4px;
+    text-align: center;
+}
+
+
+.ButtonPDF:hover{
+    background-color: var(--hoverBotao);
+}
+
+.iColor{
+    color: var(--hoverA)
+}
+
+
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .form_input {
+        width: 100%; /* Input ocupa toda a largura em telas menores */
+        margin-bottom: 10px;
+    }
+    
+    .div_CardHeader, .form_CardBody {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    /* Exibir as colunas do boletim em uma coluna só */
+    .div_grindBody {
+        flex-direction: column;
+    }
+
+    .partBoletim {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    /* Botão de PDF centralizado */
+    .ButtonPDF {
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    #id_abaDados .display {
+        flex-direction: column; /* Coloca os elementos em uma coluna apenas em telas pequenas */
+    }
+    #id_abaDados .col-6 {
+        width: 100%; /* Cada item ocupará 100% da largura */
+    }
+
+}
+
+@media (max-width: 480px) {
+    /* Texto e layout adicionais para telas bem pequenas */
+    .div_CardHeader h4 {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .form_CardBody {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .partBoletim ul li {
+        font-size: 14px;
+    }
+
+}
+
+
+
+/* Style Certificado    */
+
+.classCertificado{
+    background-color: white;
+    padding: 1.5rem;
+    border: var(--azul-escuro);
+    border-style: dashed;
+}
+
+.classCertificado p{
+    font-size: x-large;
+    margin-top: 2rem;
+}
+
+.classCertificado img {
+    width: 15rem;
+}
+
+.header_certificado{
+   
+    text-align: center;
+}
+
+
+.imgLogoMouts {
+    display: block; /* Certifica que o elemento se comporta como um bloco */
+    width: auto;
+    margin-left: auto; /* Move o conteúdo para a direita */
+    text-align: right; /* Garante que a imagem fique alinhada no canto direito */
+}
+
+
+
+.fontCertificado {
+    margin-top: 2cm;
+        font-family: "Satisfy", cursive;
+        font-weight: 700;
+        font-style: normal;  
+        font-size: 9cap;
+}
+
+
+.div_CertificadoText{
+    text-align: center;
+    margin: 0;
+}
+
+.div_CertificadoText2 div {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 0; 
+    margin-top: 8rem;
+}
+
+.div_CertificadoText3 {
+    margin: 0; 
+    padding: 0; 
+}
+
+.div_CertificadoText2 img {
+    margin-bottom: -3.5rem; 
+    width: 10rem; 
+}
+
+.div_CertificadoText2 span {
+    margin-top: -0.5rem; 
+}
+
+.div_CertificadoText1{
+    margin-top: 5cm;
+    
+}
+
+

@@ -1,0 +1,143 @@
+:root{
+    --preto: #1e2b3c;
+    --azul-escuro: #425261;
+    --marrom: #957d6b;
+    --bege: #d8c6b0;
+    --azul: #6298bb;
+    --verde-escuro:#049c7b;
+    --verde1:#3cac8c;
+    --verde2: #54b097;
+    --verde3:#7cbcac;
+    --verde4:#b0dbd0;
+    --verde5: #99bfbf;
+
+    --fundodapagina: #425261;
+    --botoes: #54b097;
+    --hoverBotao: #049c7b;
+    --titulos: #5DD9C1;
+    --texto: #b9dbd0;
+    --a: #b9dbd0;
+    --hoverA: #99bfbf;
+    --containers:#1D2E3B;
+    --inputs: white;
+}
+
+/* estilização cores*/
+
+.conteudo {
+    margin: 0;
+    background-color: #425261;
+    font-family: "Lato", serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container{
+    border-color: var(--fundodapagina);
+    border: none;
+}
+
+.no-border {
+    border: none !important;
+}
+
+.card{
+    margin-top: 1.0rem;
+    background-color: var(--containers);
+    border: none;
+    border-color: var(--fundodapagina);
+    border-radius: 12px;
+}
+
+.card h1{
+    color: var(--titulos);
+}
+
+.card h3{
+    color: var(--titulos);
+}
+
+.card label{
+    color: var(--texto);
+}
+
+.card input{
+    color: var(--containers);
+}
+
+.card-body{
+    background-color: var(--containers);
+    border-radius: 6px;
+    border: none;
+}
+
+.card form{
+    border: none;
+}
+
+.card input{
+    color: var(--inputs);
+}
+
+.btCadastrar{
+    background-color: var(--botoes);
+    border-radius: 6px;
+    border: none;
+    color: white;
+    padding: 0.5rem;
+}
+
+.btCadastrar:hover{
+    background-color: var(--hoverBotao);
+}
+
+
+/* displays */
+
+.divNome{
+    display: flex;
+}
+
+.display{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+input[type=text]{
+    width: 100%;
+}
+input[type=date]{
+    width: 100%;
+}
+input[type=email]{
+    width: 100%;
+}
+select{
+    width: 100%;
+    height: 1.8rem;
+    color: var(--containers);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .divNome,
+    .display {
+        flex-direction: column;
+    }
+
+    input[type=text]{
+        width: 100%;
+    }
+    input[type=date]{
+        width: 100%;
+    }
+    input[type=email]{
+        width: 100%;
+    }
+
+    .col-6{
+        width: 100% !important;
+    }
+}

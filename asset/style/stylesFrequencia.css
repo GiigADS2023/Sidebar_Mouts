@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+.conteudo {
+    margin: 0;
+    background-color: #425261;
+    font-family: "Lato", serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#form{
+    display: flex;
+    width: 400px;
+    justify-content: center;
+    border-radius: 12px;
+    background-color: #1D2E3B;
+    color: #b9dbd0;
+    height: 350px;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    font-weight: 600;
+    font-family: "Lato", sans-serif;
+}
+
+.form-select, .form-control{
+    width: 300px;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+#turma{
+    border-radius: 12px;
+    margin-top: 10px;
+}
+
+.table{
+    width: 1000px;
+    border-collapse: separate;
+    border-spacing: 0.5px;
+    border-radius: 10px;
+    overflow: hidden;
+    
+}
+
+td, th{
+    text-align: center;
+}
+thead th{
+    border-bottom: 2px solid;
+
+}
+.presenca-check, #selecionar-todos-check{
+    border: solid;
+    border-width: 0.5px;
+}
+
+.presenca-check:checked, #selecionar-todos-check:checked{
+    background-color: #3cac8c;
+}
+
+tfoot th, tfoot td {
+    padding: 10px; /* Adiciona padding para alinhamento */
+    border-top: 1px solid black;
+    text-align: center;
+}
+
+/* Largura do botão "Salvar" no rodapé */
+#salvar {
+    background-color: #54b097;
+    width: 20%; /* Para centralizar e evitar que pareça pequeno */
+    padding: 10px;
+    border-radius: 6px;
+    margin-top: 5px;
+    color: white;
+    font-weight: 500px;
+}
+
+#salvar:hover{
+    background-color: #049c7b;
+}
+
+/* Tabela responsiva */
+#tabela-responsiva {
+    width: 450px;
+}
+
+@media (max-width: 1024px) {
+    #formItems {
+      flex-direction: column;
+    }
+}

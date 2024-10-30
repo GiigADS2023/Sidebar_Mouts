@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+.conteudo {
+    margin: 0;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #425261;
+    font-family: "Lato", sans-serif;
+}
+
+form {
+    background-color: #1d2e3b;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: #5DD9C1;
+}
+
+label {
+    display: block;
+    margin-bottom: 0px;
+    padding-top: 5px;
+    color: #b9dbd0;
+    font-weight: bold;
+}
+
+input::placeholder{
+    color: black;
+}
+
+input[type="text"], input[type="date"], textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="date"]:focus, textarea:focus, select:focus {
+    border-color: #b9dbd0;
+    outline: none;
+}
+.QuantidadeNotas{
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 6px;
+
+}
+.QuantidadeNotas::placeholder{
+    color: black;
+}
+
+input[type="submit"], #addMateria {
+    background-color: #54b097;
+    color: white;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover, #addMateria:hover{
+    background-color: #049c7b;
+}
+
+.btnNotas {
+    background-color: #54b097;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    margin-bottom: 30px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btnNotas:hover {
+    background-color: #049c7b;
+}
+
+#boletim {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #e2e2e2;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#boletim h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.boletim-info {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+
+.bodyBemV{
+    display: flex;
+    margin: 0;
+    background-color: #7b7672;
+}
+
+
+.divsBemV{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 25%;
+    background-color: #7b7672;
+}

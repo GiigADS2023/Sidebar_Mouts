@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de notas</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="/asset/style/stylesBoletim.css">
+    <link rel="stylesheet" href="/asset/style/menu.css">
+</head>
+<body>
+    <div id="menu-container"></div>
+
+    <div class="conteudo" id="conteudo-principal">
+        <form onsubmit="event.preventDefault(); calcularMedia();">
+            <h1>Cadastro de Notas</h1>
+            <label for="Aluno">Nome do Aluno:</label><input type="text" id="Aluno" name="Aluno" placeholder="Aluno" required><br>
+            <label for="Professor">Nome do Professor:</label><input type="text" id="Professor" name="Professor" placeholder="Professor" required><br><br>
+            <label for="curso">Em qual ano o aluno está?:</label>
+            <select id="curso">
+                <option>1º ano</option>
+                <option>2º ano</option>
+                <option>3º ano</option>
+            </select>
+            
+            <div id="materiasContainer">
+                <div class="materiaSection">
+                    <label for="materia">Escolha uma matéria:</label>
+                    <select class="materia">
+                        <option>Matemática</option>
+                        <option>Português</option>
+                        <option>Geografia</option>
+                    </select>
+    
+                    <label for="QuantidadeNotas">Quantas notas serão inseridas?</label>
+                    <input type="number" class="QuantidadeNotas" name="QuantidadeNotas" placeholder="Quantidade de notas" required>
+                    <button type="button" class="btnNotas" onclick="gerarCamposNotas(this)">Adicionar</button>
+                    
+                    <div class="camposNotas"></div>
+                </div>
+            </div>
+    
+            <input type="submit" value="Cadastrar Notas"><br><br>
+            <!-- <button type="button" id="addMateria" onclick="adicionarMateria()">Adicionar outra matéria</button> -->
+    
+            <div id="boletim" style="display: none;">
+                <h2>Boletim Escolar</h2>
+                <p class="boletim-info" id="boletimAluno"></p>
+                <p class="boletim-info" id="boletimProfessor"></p>
+                <p class="boletim-info" id="boletimAno"></p>
+                <div id="boletimMaterias"></div>
+            </div>
+    
+        </form>
+    </div>
+    <script src="/asset/js/scriptBoletim.js"></script>
+    <script src="asset/js/menu.js"></script>
+    <script>
+        function carregarMenu() {
+            fetch('menu.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.querySelector('.menu-container').innerHTML = data;
+                    // Reaplicação do evento do botão toggle
+                    document.querySelector('.toggle-btn').addEventListener('click', () => {
+                        document.querySelector('.sidebar').classList.toggle('expand');
+                    });
+                })
+                .catch(error => console.error("Erro ao carregar o menu:", error));
+        }
+        carregarMenu();
+    </script>
+</body>
+</html>

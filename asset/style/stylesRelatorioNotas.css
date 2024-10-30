@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+.conteudo {
+    margin: 0;
+    background-color: #425261;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#form {
+    display: flex;
+    width: 400px;
+    justify-content: center;
+    border-radius: 12px;
+    background-color: #1D2E3B;
+    color: #b9dbd0;
+    height: 325px;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-weight: 600;
+    font-family: "Lato", sans-serif;
+}
+
+.form-select,
+.form-control {
+    width: 300px;
+    padding: 8px
+}
+
+#turma {
+    border-radius: 12px;
+    margin-top: 10px;
+}
+
+#pesquisar {
+    background-color: #3cac8c;
+    color: white;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+#btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+.table {
+    width: 1000px;
+    border-collapse: separate;
+    border-spacing: 0.5px;
+    border-radius: 12px;
+    overflow: hidden;
+
+}
+
+td,
+th {
+    text-align: center;
+}
+
+thead th {
+    border-bottom: 2px solid;
+
+}
+
+tfoot th {
+    border-top: 1px solid black;
+    border-bottom: none;
+}
+
+tfoot td {
+    border: none;
+}
+
+#tabela-responsiva {
+    width: 450px;
+}
+
+@media (max-width: 1024px) {
+    #formItems {
+        flex-direction: column;
+    }
+}
