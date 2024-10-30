@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" type="image/x-icon" href="assests/images/favicon.ico">
+    <title>Mouts Academy | Login</title>    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#425261] ">
+    <div class="flex justify-center items-center min-h-screen">
+        <div class="flex flex-col lg:flex-row lg:m-12">
+            <div class="bg-[#1D2E3B] p-12 rounded-xl flex-1">
+                <img src="asset/img/logo.svg" alt="mouts academy logo" class="w-40 h-15 mx-auto mb-2 lg:hidden">
+                <h2 class="text-center text-3xl font-medium leading-9 tracking-tight text-[#5DD9C1]">
+                    Faça login na sua conta
+                </h2>
+                <div class="mt-10">
+                    <form id="loginForm" class="space-y-6" method="POST">
+                        <div>
+                            <label for="email" class="block text-sm font-medium leading-6 text-[#b9dbd0]">Email</label>
+                            <div class="mt-2">
+                                <input
+                                    id="email"
+                                    name="email"
+                                    type="email"
+                                    autocomplete="email"
+                                    required
+                                    class="p-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                />
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-between">
+                                <label for="password" class="block text-sm font-medium leading-6 text-[#b9dbd0]">Senha</label>
+                                <div class="text-sm">
+                                    <a href="#" class="font-semibold text-[#b9dbd0] hover:text-[#99bfbf] transition ease-in-out duration-150">Esqueci minha senha</a>
+                                </div>
+                            </div>
+                            <div class="mt-2">
+                                <input
+                                    id="password"
+                                    name="password"
+                                    type="password"
+                                    autocomplete="current-password"
+                                    required
+                                    class="p-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                />
+                            </div>
+                        </div>
+                        <div>
+                            <button
+                                type="submit"
+                                class="flex w-full justify-center rounded-md bg-[#54b097] px-4 py-2 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-[#049c7b] transition ease-in-out duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#54b097]"
+                            >
+                                Login
+                            </button>
+                        </div>
+                        <div class="text-md text-center">
+                            <a href="#" class="font-semibold text-[#b9dbd0] hover:text-[#99bfbf] transition ease-in-out duration-150">Cadastrar</a>
+                        </div>
+                        <div style="margin-top: 30vh;" class="text-center">
+                            <a href="https://github.com" class="flex items-center justify-center w-full rounded-md bg-[#54b097] px-4 py-2 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-[#049c7b] transition ease-in-out duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[indigo-600]">
+                                <i class="fa-brands fa-github mr-2"></i> 
+                                Github
+                            </a>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+    
+            <div class="relative hidden lg:flex justify-center bg-indigo-500 overflow-hidden rounded-xl">
+                <div class="absolute inset-0 bg-gradient-to-r from-slate-900 to-transparent"></div>
+                <img class="w-full h-full object-cover" src="./asset/img/backgroundgreen.png" alt="purple background" />
+                <div class="absolute inset-0 flex items-center justify-center z-10">
+                    <img src="asset/img/logo.svg" alt="mouts academy logo" style="width: 600px; height: 600px;">
+            </div>  
+        </div>
+    </div>
+
+    <script src="asset/js/login.js"></script>
+</body>
+</html>
