@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const token = await response.text();
       localStorage.setItem("token", token);
 
-      window.location.href = "menu.html";
+      window.location.href = "/pages/home.html";
     } catch (error) {
       alert(error.message);
     }
