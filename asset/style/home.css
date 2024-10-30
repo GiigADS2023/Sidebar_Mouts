@@ -123,6 +123,7 @@ a.sidebar-link {
     white-space: nowrap;
     border-left: 3px solid transparent;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .sidebar-link i {
