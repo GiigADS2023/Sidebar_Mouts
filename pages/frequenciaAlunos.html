@@ -13,7 +13,7 @@
     href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
     rel="stylesheet">
     <link rel="stylesheet" href="/asset/style/stylesFrequencia.css">
-    <link rel="stylesheet" href="/asset/style/menu.css">
+    <link rel="stylesheet" href="/asset/style/home.css">
 
 </head>
 
@@ -50,10 +50,10 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src="/asset/js/scriptFrequencia.js" type="module"></script>
-    <script src="/asset/js/menu.js"></script>
+    <script src="/asset/js/home.js"></script>
     <script>
         function carregarMenu() {
-            fetch('menu.html')
+            fetch('home.html')
                 .then(response => response.text())
                 .then(data => {
                     document.querySelector('.menu-container').innerHTML = data;
