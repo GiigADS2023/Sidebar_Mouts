@@ -278,3 +278,75 @@ a.sidebar-link:hover,
         gap: 2rem;
     }
 }
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 60px; 
+    }
+
+    .sidebar.expand {
+        width: 180px; 
+    }
+
+    .sidebar-nav .mouts_subtitle {
+        font-size: 0.9rem;
+    }
+
+    .sidebar-logo img {
+        width: 40px;
+        height: auto;
+    }
+
+    .sidebar-link i {
+        font-size: 1rem;
+        margin-right: 0.5rem;
+    }
+
+    .sidebar-link span {
+        font-size: 0.9rem;
+    }
+
+    .logo-container {
+        padding: 20px;
+    }
+
+    .logo-container h3 {
+        font-size: 1.2rem;
+    }
+
+    .text-content {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .sidebar {
+        width: 70px; 
+    }
+
+    .sidebar.expand {
+        width: 200px; 
+    }
+
+    .sidebar-link i {
+        font-size: 0.9rem;
+    }
+
+    .logo-container h3 {
+        font-size: 1.5rem;
+    }
+
+    .text-content {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .conteudo {
+        padding: 40px; 
+    }
+
+    .sidebar-container {
+        gap: 1.5rem;
+    }
+}
