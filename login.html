@@ -9,19 +9,70 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
+<style>
+    #lang-btn {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 50px;
+        cursor: pointer;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        z-index: 1050; 
+        position: relative; 
+    }
 
+    #lang-btn:hover {
+        background-color: #0056b3;
+        transform: scale(1.05);
+    }
+
+    #lang-btn:active {
+        transform: scale(1);
+        background-color: #004085;
+    }
+
+    @media (max-width: 600px) {
+        #lang-btn {
+            padding: 8px 15px;
+            font-size: 14px;
+            width: auto;
+            position: fixed; 
+            top: 60px;
+            right: 10px; 
+            z-index: 1050; 
+        }
+    }
+
+    @media (max-width: 1000px) {
+        #lang-btn {
+            padding: 8px 15px;
+            font-size: 14px;
+            width: auto;
+            position: fixed; 
+            top: 60px;
+            right: 10px; 
+            z-index: 1050; 
+        }
+    }
+</style>
 <body class="bg-[#425261] ">
+    <div style="position: fixed; top: 10px; right: 10px;">
+        <button id="lang-btn" data-lang-en="Português" data-lang-pt="Inglês">Inglês</button>
+    </div>
     <div class="flex justify-center items-center min-h-screen">
         <div class="flex flex-col lg:flex-row lg:m-12">
             <div class="bg-[#1D2E3B] p-12 rounded-xl flex-1">
                 <img src="asset/img/logo.svg" alt="mouts academy logo" class="w-40 h-15 mx-auto mb-2 lg:hidden">
-                <h2 class="text-center text-3xl font-medium leading-9 tracking-tight text-[#5DD9C1]">
+                <h2 class="text-center text-3xl font-medium leading-9 tracking-tight text-[#5DD9C1]" data-lang-en="Log in to your account" data-lang-pt="Faça login na sua conta">
                     Faça login na sua conta
                 </h2>
                 <div class="mt-10">
                     <form id="loginForm" class="space-y-6" method="POST">
                         <div>
-                            <label for="email" class="block text-sm font-medium leading-6 text-[#b9dbd0]">Email</label>
+                            <label for="email" class="block text-sm font-medium leading-6 text-[#b9dbd0]" data-lang-en="Email" data-lang-pt="Email">Email</label>
                             <div class="mt-2">
                                 <input
                                     id="email"
@@ -35,9 +86,9 @@
                         </div>
                         <div>
                             <div class="flex items-center justify-between">
-                                <label for="password" class="block text-sm font-medium leading-6 text-[#b9dbd0]">Senha</label>
+                                <label for="password" class="block text-sm font-medium leading-6 text-[#b9dbd0]" data-lang-en="Password" data-lang-pt="Senha">Senha</label>
                                 <div class="text-sm">
-                                    <a href="#" class="font-semibold text-[#b9dbd0] hover:text-[#99bfbf] transition ease-in-out duration-150">Esqueci minha senha</a>
+                                    <a href="#" class="font-semibold text-[#b9dbd0] hover:text-[#99bfbf] transition ease-in-out duration-150" data-lang-en="Forgot your password?" data-lang-pt="Esqueci minha senha">Esqueci minha senha</a>
                                 </div>
                             </div>
                             <div class="mt-2">
@@ -55,12 +106,12 @@
                             <button
                                 type="submit"
                                 class="flex w-full justify-center rounded-md bg-[#54b097] px-4 py-2 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-[#049c7b] transition ease-in-out duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#54b097]"
-                            >
+                                data-lang-en="Login" data-lang-pt="Login">
                                 Login
                             </button>
                         </div>
                         <div class="text-md text-center">
-                            <a href="#" class="font-semibold text-[#b9dbd0] hover:text-[#99bfbf] transition ease-in-out duration-150">Cadastrar</a>
+                            <a href="#" class="font-semibold text-[#b9dbd0] hover:text-[#99bfbf] transition ease-in-out duration-150" data-lang-en="Register" data-lang-pt="Cadastrar">Cadastrar</a>
                         </div>
                         <div style="margin-top: 30vh;" class="text-center">
                             <a href="https://github.com" class="flex items-center justify-center w-full rounded-md bg-[#54b097] px-4 py-2 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-[#049c7b] transition ease-in-out duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[indigo-600]">
@@ -78,10 +129,11 @@
                 <img class="w-full h-full object-cover" src="./asset/img/backgroundgreen.png" alt="purple background" />
                 <div class="absolute inset-0 flex items-center justify-center z-10">
                     <img src="asset/img/logo.svg" alt="mouts academy logo" style="width: 600px; height: 600px;">
-            </div>  
+                </div>  
+            </div>
         </div>
     </div>
-
-    <script src="asset/js/login.js"></script>
+    <script src="/asset/js/lang-btn.js"></script>
+    <script src="/asset/js/login.js"></script>
 </body>
 </html>

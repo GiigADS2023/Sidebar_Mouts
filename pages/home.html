@@ -12,6 +12,55 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
     <title>Mouts Academy</title>
+    <style>
+        #lang-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            z-index: 1050; 
+            position: relative; 
+        }
+
+        #lang-btn:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        #lang-btn:active {
+            transform: scale(1);
+            background-color: #004085;
+        }
+
+        @media (max-width: 600px) {
+            #lang-btn {
+                padding: 8px 15px;
+                font-size: 14px;
+                width: auto;
+                position: fixed; 
+                top: 60px;
+                right: 10px; 
+                z-index: 1050; 
+            }
+        }
+
+        @media (max-width: 1000px) {
+            #lang-btn {
+                padding: 8px 15px;
+                font-size: 14px;
+                width: auto;
+                position: fixed; 
+                top: 60px;
+                right: 10px; 
+                z-index: 1050; 
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="sidebar-container">
@@ -26,97 +75,103 @@
             </div>
             <ul class="sidebar-nav">
                 <h4>
-                    <span class="mouts_subtitle">Menu Principal</span>
+                    <span class="mouts_subtitle" data-lang-en="Main Menu" data-lang-pt="Menu Principal">Menu Principal</span>
                 </h4>
                 <li class="sidebar-item">
                     <a href="#" class="sidebar-link has-dropdown" aria-expanded="false" aria-controls="aluno-dropdown">
                         <i class="fa-solid fa-users-gear"></i>
-                        <span>Alunos</span>
+                        <span data-lang-en="Students" data-lang-pt="Alunos">Alunos</span>
                     </a>
                     <ul class="sidebar-dropdown" id="aluno-dropdown">
                         <li class="sidebar-item">
-                            <a href="cadastrarAlunos.html" class="sidebar-link" onclick="carregarConteudo('cadastrarAlunos.html', event)">Matricular</a>
-                            <a href="consultarAlunos.html" class="sidebar-link" onclick="carregarConteudo('consultarAlunos.html', event)">Consultar</a>
+                            <a href="cadastrarAlunos.html" class="sidebar-link" onclick="carregarConteudo('cadastrarAlunos.html', event)" data-lang-en="Enroll" data-lang-pt="Matricular">Matricular</a>
+                            <a href="consultarAlunos.html" class="sidebar-link" onclick="carregarConteudo('consultarAlunos.html', event)" data-lang-en="Consult" data-lang-pt="Consultar">Consultar</a>
                         </li>
                     </ul>
                 </li>
                 <li class="sidebar-item">
                     <a href="#" class="sidebar-link has-dropdown" aria-expanded="false" aria-controls="conteudo-dropdown">
                         <i class="fa-solid fa-book"></i>
-                        <span>Conteúdo</span>
+                        <span data-lang-en="Content" data-lang-pt="Conteúdo">Conteúdo</span>
                     </a>
                     <ul class="sidebar-dropdown" id="conteudo-dropdown">
                         <li class="sidebar-item">
-                            <a href="Modulos.html" class="sidebar-link" onclick="carregarConteudo('Modulos.html', event)">Módulos</a>
+                            <a href="Modulos.html" class="sidebar-link" onclick="carregarConteudo('Modulos.html', event)" data-lang-en="Modules" data-lang-pt="Módulos">Módulos</a>
                         </li>
                     </ul>
                 </li>
                 <li class="sidebar-item">
                     <a href="#" class="sidebar-link has-dropdown" aria-expanded="false" aria-controls="pedagogico-dropdown">
                         <i class="fa-regular fa-id-card"></i>
-                        <span>Pedagógico</span>
+                        <span data-lang-en="Pedagogic" data-lang-pt="Pedagógico">Pedagógico</span>
                     </a>
                     <ul class="sidebar-dropdown" id="pedagogico-dropdown">
                         <li class="sidebar-item">
-                            <a href="frequenciaAlunos.html" class="sidebar-link" onclick="carregarConteudo('frequenciaAlunos.html', event)">Marcar Presença</a>
-                            <a href="boletimAlunos.html" class="sidebar-link" onclick="carregarConteudo('boletimAlunos.html', event)">Registrar Notas</a>
-                            <a href="relatorioNotas.html" class="sidebar-link" onclick="carregarConteudo('relatorioNotas.html', event)">Histórico de Notas</a>
-                            <a href="relatorioFrequencia.html" class="sidebar-link" onclick="carregarConteudo('relatorioFrequencia.html', event)">Frequência</a>
+                            <a href="frequenciaAlunos.html" class="sidebar-link" onclick="carregarConteudo('frequenciaAlunos.html', event)" data-lang-en="Mark Attendance" data-lang-pt="Marcar Presença">Marcar Presença</a>
+                            <a href="boletimAlunos.html" class="sidebar-link" onclick="carregarConteudo('boletimAlunos.html', event)" data-lang-en="Record Grades" data-lang-pt="Registrar Notas">Registrar Notas</a>
+                            <a href="relatorioNotas.html" class="sidebar-link" onclick="carregarConteudo('relatorioNotas.html', event)" data-lang-en="Grades Report" data-lang-pt="Histórico de Notas">Histórico de Notas</a>
+                            <a href="relatorioFrequencia.html" class="sidebar-link" onclick="carregarConteudo('relatorioFrequencia.html', event)" data-lang-en="Attendance" data-lang-pt="Frequência">Frequência</a>
                         </li>
                     </ul>
                 </li>
 
                 <h4>
-                    <span class="mouts_subtitle">Geral</span>
+                    <span class="mouts_subtitle" data-lang-en="General" data-lang-pt="Geral">Geral</span>
                 </h4>
                 <li class="sidebar-item">
                     <a href="#" class="sidebar-link has-dropdown" aria-expanded="false" aria-controls="suporte-dropdown">
                         <i class="fa-solid fa-headset"></i>
-                        <span>Suporte</span>
+                        <span data-lang-en="Support" data-lang-pt="Suporte">Suporte</span>
                     </a>
                     <ul class="sidebar-dropdown" id="suporte-dropdown">
                         <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">Novo Chamado</a>
-                            <a href="#" class="sidebar-link">Meus Chamados</a>
+                            <a href="#" class="sidebar-link" data-lang-en="New Ticket" data-lang-pt="Novo Chamado">Novo Chamado</a>
+                            <a href="#" class="sidebar-link" data-lang-en="My Tickets" data-lang-pt="Meus Chamados">Meus Chamados</a>
                         </li>
                     </ul>
                 </li>
 
                 <h4>
-                    <span class="mouts_subtitle">Conta</span>
+                    <span class="mouts_subtitle" data-lang-en="Account" data-lang-pt="Conta">Conta</span>
                 </h4>
                 <li class="sidebar-item">
                     <a href="#" class="sidebar-link has-dropdown" aria-expanded="false" aria-controls="usuario-dropdown">
                         <i class="fa-solid fa-user-large"></i>
-                        <span>Usuário</span>
+                        <span data-lang-en="User" data-lang-pt="Usuário">Usuário</span>
                     </a>
                     <ul class="sidebar-dropdown" id="usuario-dropdown">
                         <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">Meu Perfil</a>
-                            <a href="#" class="sidebar-link">Alterar Senha</a>
+                            <a href="#" class="sidebar-link" data-lang-en="My Profile" data-lang-pt="Meu Perfil">Meu Perfil</a>
+                            <a href="#" class="sidebar-link" data-lang-en="Change Password" data-lang-pt="Alterar Senha">Alterar Senha</a>
                         </li>
                     </ul>
                 </li>
             </ul>
             <div class="sidebar-footer">
-                <a id="logout" class="sidebar-link" style="text-decoration: none;">
+                <a id="logout" class="sidebar-link" style="text-decoration: none; color: #B9DBD0;">
                     <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                    <span>Sair</span>
+                    <span data-lang-en="Logout" data-lang-pt="Sair">Sair</span>
                 </a>
             </div>
         </aside>
 
+        <div style="position: fixed; top: 10px; right: 10px;">
+            <button id="lang-btn" data-lang-en="Português" data-lang-pt="Inglês">Inglês</button>
+        </div>
+        
         <div class="conteudo" id="conteudo-principal">
             <div class="logo-container">
                 <img src="/asset/img/logo.svg" alt="mouts academy logo" class="logo-img">
-                <p class="text-content">Transformando talentos em profissionais globais por meio de tecnologia e inovação.
+                <p class="text-content" data-lang-en="Transforming talents into global professionals through technology and innovation." data-lang-pt="Transformando talentos em profissionais globais por meio de tecnologia e inovação.">
+                    Transformando talentos em profissionais globais por meio de tecnologia e inovação.
                 </p>
-                <h3>SEU FUTURO COMEÇA AQUI!</h3>
+                <h3 data-lang-en="YOUR FUTURE BEGINS HERE!" data-lang-pt="SEU FUTURO COMEÇA AQUI!">SEU FUTURO COMEÇA AQUI!</h3>
             </div>
         </div>
     </div>
     <script src="/asset/js/home.js"></script>
     <script src="/asset/js/logout.js"></script>
     <script src="/asset/js/auth.js"></script>
+    <script src="/asset/js/lang-btn.js"></script>
 </body>
 </html>

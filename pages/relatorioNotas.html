@@ -14,7 +14,6 @@
         rel="stylesheet">
     <link rel="stylesheet" href="/asset/style/stylesRelatorioNotas.css">
     <link rel="stylesheet" href="/asset/style/home.css">
-
 </head>
 
 <body>
@@ -24,23 +23,23 @@
         <div id="form">
             <form id="formItems">
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Aluno</label>
+                    <label for="exampleInputEmail1" class="form-label" data-lang-en="Student" data-lang-pt="Aluno">Aluno</label>
                     <select class="form-select form-input" aria-label="Default select example">
-                        <option selected>Selecione um aluno</option>
+                        <option selected data-lang-en="Select a student" data-lang-pt="Selecione um aluno">Selecione um aluno</option>
                     </select>
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Matéria</label>
+                    <label for="exampleInputPassword1" class="form-label" data-lang-en="Subject" data-lang-pt="Matéria">Matéria</label>
                     <select class="form-select form-input" aria-label="Default select example">
-                        <option selected>Selecione uma matéria</option>
+                        <option selected data-lang-en="Select a subject" data-lang-pt="Selecione uma matéria">Selecione uma matéria</option>
                     </select>
-                </div>            
+                </div>
                 <div class="mb-3" id="btn-container">
-                    <button type="submit" class="btn" class="form-control" id="pesquisar">Pesquisar</button>
+                    <button type="submit" class="btn" class="form-control" id="pesquisar" data-lang-en="Search" data-lang-pt="Pesquisar">Pesquisar</button>
                 </div>
             </form>
         </div>
-    
+
         <div id="turma">
         </div>
     </div>
@@ -50,6 +49,7 @@
         crossorigin="anonymous"></script>
     <script src="/asset/js/scriptRelatorioNotas.js" type="module"></script>
     <script src="/asset/js/home.js"></script>
+    <script src="/asset/js/lang-btn.js"></script>
     <script>
         function carregarMenu() {
             fetch('home.html')

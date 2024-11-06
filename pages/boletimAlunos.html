@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de notas</title>
+    <title data-lang-en="Grade Registration" data-lang-pt="Cadastro de Notas">Cadastro de Notas</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,41 +19,42 @@
 
     <div class="conteudo" id="conteudo-principal">
         <form onsubmit="event.preventDefault(); calcularMedia();">
-            <h1>Cadastro de Notas</h1>
-            <label for="Aluno">Nome do Aluno:</label><input type="text" id="Aluno" name="Aluno" placeholder="Aluno" required><br>
-            <label for="Professor">Nome do Professor:</label><input type="text" id="Professor" name="Professor" placeholder="Professor" required><br><br>
-            <label for="curso">Em qual ano o aluno está?:</label>
+            <h1 data-lang-en="Grade Registration" data-lang-pt="Cadastro de Notas">Cadastro de Notas</h1>
+            <label for="Aluno" data-lang-en="Student Name:" data-lang-pt="Nome do Aluno:">Nome do Aluno:</label>
+            <input type="text" id="Aluno" name="Aluno" placeholder="Aluno" required data-lang-en="Student" data-lang-pt="Aluno"><br>
+            <label for="Professor" data-lang-en="Teacher Name:" data-lang-pt="Nome do Professor:">Nome do Professor:</label>
+            <input type="text" id="Professor" name="Professor" placeholder="Professor" required data-lang-en="Teacher" data-lang-pt="Professor"><br><br>
+            <label for="curso" data-lang-en="Which year is the student in?" data-lang-pt="Em qual ano o aluno está?:">Em qual ano o aluno está?:</label>
             <select id="curso">
-                <option>1º ano</option>
-                <option>2º ano</option>
-                <option>3º ano</option>
+                <option data-lang-en="1st Year" data-lang-pt="1º ano">1º ano</option>
+                <option data-lang-en="2nd Year" data-lang-pt="2º ano">2º ano</option>
+                <option data-lang-en="3rd Year" data-lang-pt="3º ano">3º ano</option>
             </select>
             
             <div id="materiasContainer">
                 <div class="materiaSection">
-                    <label for="materia">Escolha uma matéria:</label>
+                    <label for="materia" data-lang-en="Choose a subject:" data-lang-pt="Escolha uma matéria:">Escolha uma matéria:</label>
                     <select class="materia">
-                        <option>Matemática</option>
-                        <option>Português</option>
-                        <option>Geografia</option>
+                        <option data-lang-en="Mathematics" data-lang-pt="Matemática">Matemática</option>
+                        <option data-lang-en="Portuguese" data-lang-pt="Português">Português</option>
+                        <option data-lang-en="Geography" data-lang-pt="Geografia">Geografia</option>
                     </select>
     
-                    <label for="QuantidadeNotas">Quantas notas serão inseridas?</label>
-                    <input type="number" class="QuantidadeNotas" name="QuantidadeNotas" placeholder="Quantidade de notas" required>
-                    <button type="button" class="btnNotas" onclick="gerarCamposNotas(this)">Adicionar</button>
+                    <label for="QuantidadeNotas" data-lang-en="How many grades will be entered?" data-lang-pt="Quantas notas serão inseridas?">Quantas notas serão inseridas?</label>
+                    <input type="number" class="QuantidadeNotas" name="QuantidadeNotas" placeholder="Quantidade de notas" required data-lang-en="Number of grades" data-lang-pt="Quantidade de notas">
+                    <button type="button" class="btnNotas" onclick="gerarCamposNotas(this)" data-lang-en="Add" data-lang-pt="Adicionar">Adicionar</button>
                     
                     <div class="camposNotas"></div>
                 </div>
             </div>
     
-            <input type="submit" value="Cadastrar Notas"><br><br>
-            <!-- <button type="button" id="addMateria" onclick="adicionarMateria()">Adicionar outra matéria</button> -->
+            <input type="submit" value="Cadastrar Notas" data-lang-en="Register Grades" data-lang-pt="Cadastrar Notas"><br><br>
     
             <div id="boletim" style="display: none;">
-                <h2>Boletim Escolar</h2>
-                <p class="boletim-info" id="boletimAluno"></p>
-                <p class="boletim-info" id="boletimProfessor"></p>
-                <p class="boletim-info" id="boletimAno"></p>
+                <h2 data-lang-en="Grade Report" data-lang-pt="Boletim Escolar">Boletim Escolar</h2>
+                <p class="boletim-info" id="boletimAluno" data-lang-en="Student" data-lang-pt="Aluno"></p>
+                <p class="boletim-info" id="boletimProfessor" data-lang-en="Teacher" data-lang-pt="Professor"></p>
+                <p class="boletim-info" id="boletimAno" data-lang-en="Year" data-lang-pt="Ano"></p>
                 <div id="boletimMaterias"></div>
             </div>
     
@@ -61,13 +62,13 @@
     </div>
     <script src="/asset/js/scriptBoletim.js"></script>
     <script src="/asset/js/home.js"></script>
+    <script src="/asset/js/lang-btn.js"></script>
     <script>
         function carregarMenu() {
             fetch('home.html')
                 .then(response => response.text())
                 .then(data => {
                     document.querySelector('.menu-container').innerHTML = data;
-                    // Reaplicação do evento do botão toggle
                     document.querySelector('.toggle-btn').addEventListener('click', () => {
                         document.querySelector('.sidebar').classList.toggle('expand');
                     });
